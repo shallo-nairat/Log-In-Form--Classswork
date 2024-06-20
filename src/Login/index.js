@@ -3,6 +3,7 @@ import './index.css';
 import { useState } from 'react';
 import { login } from './utils';
 
+
 const Login = () =>{
     const [username,setUserName]=useState('');
     console.log(username);
@@ -18,12 +19,13 @@ const Login = () =>{
     return(
         <div>
             <form onSubmit={handleLogin}>
-            <button type='submit'>Login</button>
 
                 <h2>Login</h2>
             <input placeholder="Enter Username" type="text" onChange={(event)=>setUserName(event.target.value)}/>
             <br></br>
             <input placeholder="Enter Password" type="password" onChange={(event)=>setPassword(event.target.value)}/>
+            <button type='submit'>Login</button>
+
             <br></br>
            
             </form>
